@@ -1,27 +1,52 @@
-**Project Idea**
-I am a student at Sabancı University, and this project investigates the correlation between exercise frequency and stress levels using a lifestyle and mental health dataset.  
-The main goal is to understand whether exercising more frequently is associated with lower self-reported stress and to analyze how other lifestyle factors (sleep, diet, social interaction, anxiety, happiness)
-contribute to stress.
+**Investigating Screen Time and Social Interaction Levels**
+**Overview**
 
-To answer this question, I will test the following hypotheses:
+Digital devices have become an essential part of everyday life, significantly shaping how individuals communicate, socialize, and spend their free time. While increased screen time offers convenience and constant connectivity, its impact on real-world social interaction remains unclear. This project focuses on analyzing the relationship between daily screen time and social interaction level to better understand the social effects of digital technology usage.
 
-- **H1:** Exercise frequency is negatively correlated with stress level.  
-- **H0:** Exercise frequency has no statistically significant relationship with stress level.
+**Objectives**
 
-This project follows the full data science pipeline, including data cleaning, exploratory data analysis, hypothesis testing, and machine learning.
+The primary goals of this study are:
 
-**MOTIVATION**
-As someone who has recently increased my exercise habits, I believe that my overall stress level has noticeably decreased compared to before I started working out. However, I am not sure whether this change is
-truly caused by exercising or if it is simply a coincidence. With this project, my goal is to scientifically analyze whether there is a measurable correlation between exercise frequency and stress level.
-By using a structured dataset and applying data science techniques, I aim to understand whether my personal observation reflects a real pattern or if other factors 
-(sleep, diet, social interaction, anxiety, etc.) play a more significant role. This project therefore serves both as a personal exploration and a data-driven attempt to verify how lifestyle changes 
-influence mental wellbeing.
+-To analyze the relationship between daily screen time and social interaction levels.
+-To explore whether increased screen time is associated with reduced social interaction.
+-To identify patterns between digital habits, social behavior, and well-being indicators.
+-To examine how lifestyle factors such as sleep, stress, and anxiety relate to screen usage and social interaction.
 
-**Project Plan**
-This project aims to investigate whether exercise frequency has a measurable effect on stress levels by analyzing a lifestyle and mental-health dataset. The dataset includes variables such as exercise
-frequency, sleep hours, diet quality, social interaction level, anxiety score, happiness index, and self-reported stress level. By examining these components together, the goal is to determine whether
-the lower stress I experience after exercising is due to an actual correlation or merely a coincidence.
+**Data Collection and Preparation**
 
-During the analysis process, I will apply exploratory data analysis (EDA) using statistical and visualization techniques to observe patterns, distributions, and relationships among lifestyle,
-factors. Correlation tests and hypothesis testing will be used to quantify the relationship between exercise and stress levels. Finally, machine learning models will be implemented to evaluate
-how well lifestyle habits can predict stress levels based on multiple features.
+-The dataset used in this project is sourced from a publicly available mental health and lifestyle dataset. It includes demographic, behavioral, and psychological variables.
+
+-Key steps in data preparation include:
+
+**Data Cleaning:**
+-Handling missing and inconsistent values.
+-Converting categorical variables (e.g., social interaction level) into analyzable formats.
+
+**Data Standardization:**
+-Normalizing numerical values such as screen time and stress scores.
+
+**Feature Selection:**
+-Extracting relevant variables including screen time, social interaction level, sleep hours, stress level, anxiety score, and happiness index.
+
+**Data Structuring:**
+-Organizing the dataset for effective analysis and visualization.
+
+**Analytical Approach**
+**Pattern Analysis**
+-Comparing average screen time across different social interaction levels (High, Medium, Low).
+-Identifying distributions and central tendencies of screen time within social groups.
+
+**Correlation Analysis**
+-Examining the relationship between screen time and social interaction level.
+-Exploring correlations between screen time and mental health indicators such as stress, anxiety, and happiness.
+
+**Exploratory Data Analysis (EDA)**
+-Visualizing trends using histograms, box plots, and categorical comparisons.
+-Investigating potential outliers and behavioral patterns.
+
+**Key Takeaways**
+This project aims to deliver:
+-A structured and clean dataset suitable for behavioral and lifestyle analysis.
+-Data-driven insights into how screen time relates to levels of social interaction.
+-Visual representations illustrating differences in screen usage across social groups.
+-A deeper understanding of the social implications of digital technology usage.
