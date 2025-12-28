@@ -1,72 +1,85 @@
-Investigating the Relationship Between Screen Time and Income Level
-📌 **Overview**
+**📱 Digital Lifestyle Analysis
+Screen Time, Income Level, and Well-Being Indicators
+📌 Overview**
 
-Digital technology shapes how individuals work, communicate, and spend leisure time. However, the relationship between socioeconomic status and digital behavior remains underexplored.
-This study investigates whether income level is associated with differences in daily screen time, offering insight into how socioeconomic factors influence digital habits and potential behavioral disparities.
+Digital devices play an essential role in modern daily life, but not everyone interacts with them in the same way. This project investigates how daily screen time relates to income level and explores how screen usage is connected to psychological and lifestyle indicators such as stress, happiness, digital dependence, sleep duration, and social media usage.
 
-By comparing screen time across income groups and applying statistical tests, the project aims to provide a deeper understanding of how socioeconomic status contributes to modern digital lifestyles.
+The goal is to understand whether socioeconomic status affects digital behavior and whether heavy screen time corresponds to meaningful differences in well-being.
 
 🎯 **Objectives**
 
 This study aims to:
 
-Analyze the relationship between income level and daily screen time.
+Determine whether daily screen time differs across income levels
 
-Determine whether individuals from different income brackets show significantly different digital habits.
+Explore relationships between screen time and:
 
-Explore whether related well-being indicators (stress, happiness, digital dependence) also vary with income.
+stress
 
-Provide a statistically grounded evaluation using ANOVA, post-hoc analysis, and correlation tests.
+happiness
 
-🧪 Hypotheses
-Null Hypothesis (H₀)
+digital dependence
 
-Income level has no statistically significant effect on daily screen time.
-(Mean screen time is the same across all income groups.)
+sleep hours
 
-Alternative Hypothesis (H₁)
+social media usage
 
-Income level has a statistically significant effect on daily screen time.
-(At least one income group differs from the others.)
+Present comprehensive EDA (scatter plots, boxplots, heatmaps, correlations)
 
-Additional Tests
+Apply formal statistical tests (ANOVA and Pearson correlation)
 
-To strengthen the analysis, the following relationships were also tested:
+Provide data-driven insights using a publicly available digital lifestyle dataset
 
-Screen time vs. stress, happiness, and digital dependence
+🧪 **Hypotheses**
+Main Hypothesis: Income Level → Screen Time
 
-Income level vs. these psychological variables
+Null Hypothesis (H₀):
+Income level has no statistically significant effect on daily screen time
+(all income groups have the same mean screen time).
 
-Using Pearson correlation, ANOVA, and t-tests
+Alternative Hypothesis (H₁):
+Income level has a significant effect on daily screen time.
 
-All hypothesis tests were evaluated with a significance threshold of α = 0.05.
+Additional Hypothesis: Income Level → Digital Dependence
 
-📊 **Dataset Description**
+H₀: Income level has no effect on digital dependence.
 
-The project uses the Digital Lifestyle Benchmark Dataset, consisting of:
+H₁: Income level significantly affects digital dependence.
+
+Correlation Hypotheses (Screen Time vs. Well-Being Indicators)
+
+For each variable:
+
+H₀: There is no linear relationship with screen time.
+
+H₁: There is a significant linear relationship with screen time.
+
+All tests use α = 0.05.
+
+**📊 Dataset Description**
+
+This project uses the Digital Lifestyle Benchmark Dataset, which includes:
 
 Demographics: age, gender, region, income level
 
-Digital Behavior: device hours per day, social media minutes, phone unlocks, notifications
+Digital behavior: device hours per day, social media minutes, phone unlocks, notifications
 
-Psychological Indicators: stress, anxiety, depression, happiness, digital dependence
+Psychological indicators: stress, anxiety, depression, happiness, digital dependence
 
-Lifestyle Attributes: sleep hours, physical activity days, daily role
+Lifestyle factors: sleep hours, physical activity days, daily role
 
-The dataset is large and diverse enough to support socio-behavioral comparisons.
+The dataset provides a rich basis for exploring both digital usage and its psychological context.
 
-🔧 **Data Preparation**
-1. Data Cleaning
+**🔧 Data Preparation**
+1. Cleaning
 
-Removed missing values for key variables
+Removed rows with missing values in key variables
 
-Filtered unrealistic values (e.g., >18 hours/day screen time)
+Restricted screen time to the realistic 0–18 hour range
 
-Ensured categorical consistency for income groups
+Created a cleaned dataframe (df_clean) for analysis
 
-2. Feature Selection
-
-Key variables used in this project:
+2. Selected Variables
 
 device_hours_per_day
 
@@ -82,68 +95,134 @@ social_media_mins
 
 sleep_hours
 
-3. Structuring
-
-Created a cleaned dataframe (df_clean) suitable for EDA and hypothesis testing.
-
-🔍 **Analytical Approach**
+**🔍 Analytical Approach**
 Exploratory Data Analysis (EDA)
 
-Visual comparison of screen time across income groups
+The notebook includes:
 
-Boxplots, bar charts, distribution plots
+Screen time distribution (histogram)
 
-Group statistics for each income category
+Income level distribution (countplot)
 
-Correlation analysis with well-being indicators
+Average screen time per income group (bar plot)
 
-Statistical Testing
+Boxplots comparing screen time across income groups
 
-One-way ANOVA to test differences in screen time among 4 income groups
+Scatter plots comparing screen time with:
 
-Post-hoc Tukey test to identify which groups differ significantly
+stress
 
-Independent t-tests for pairwise comparisons
+happiness
 
-Pearson correlation to explore broader relationships
+digital dependence
 
-⭐ **Key Findings**
+social media minutes
 
-Income level is significantly associated with daily screen time (ANOVA p < 0.05), leading to a rejection of the null hypothesis.
+sleep hours
 
-Lower-income individuals tended to exhibit higher average screen time, while higher-income individuals showed more balanced usage patterns.
+A correlation matrix and heatmap
 
-Digital dependence scores were higher among lower-income groups, suggesting potential attachment to devices or digital coping behaviors.
+**Statistical Testing**
+1. ANOVA — Income Level → Screen Time
 
-Happiness and stress levels showed variation across income categories, with higher-income individuals reporting slightly higher happiness and lower stress.
+Used to test whether income groups differ in mean daily screen time.
 
-Social media minutes and notifications also differed across groups, reflecting distinct behavioral patterns linked to socioeconomic status.
+2. ANOVA — Income Level → Digital Dependence
 
-These results indicate that screen time is not solely a behavioral choice, but may be influenced by socioeconomic factors.
+Tests whether socioeconomic status affects digital dependency.
 
-🧾 **Conclusion**
+3. Pearson Correlations
 
-The analysis demonstrates a clear relationship between income level and digital behavior, particularly screen time.
-Lower-income groups tend to spend more time on devices and report higher digital dependence, while higher-income individuals show lower screen time and more balanced emotional indicators.
+Between screen time and:
 
-This suggests that socioeconomic status contributes to different digital lifestyle patterns, potentially influencing well-being, productivity, and stress.
+stress
 
-🚀 **Future Work**
+happiness
 
-Develop regression models to predict screen time from income and lifestyle factors
+digital dependence
 
-Include region or occupation as moderating variables
+social media minutes
 
-Expand the dataset with offline social interaction measures
+sleep hours
 
-Explore behavioral segmentation using clustering techniques
+Each includes correlation coefficients and p-values.
 
-📌 **Technologies Used**
+**🧮 Key Results**
+⭐ 1. Income Level and Screen Time (ANOVA)
 
-Python (Pandas, NumPy)
+F-statistic: 2.56
+
+p-value: 0.053
+
+**📌 Interpretation:**
+
+Since p > 0.05, we fail to reject H₀.
+
+The effect is borderline (marginal) → a weak trend exists, but not statistically conclusive.
+
+⭐ 2. Income Level and Digital Dependence (ANOVA)
+
+F-statistic: 2.29
+
+p-value: 0.076
+
+**📌 Interpretation:**
+
+p > 0.05, so no significant effect of income level on digital dependence.
+
+The p-value suggests a weak, emerging trend, but not enough for significance.
+
+⭐ 3. Correlation Analysis (Screen Time vs. Well-Being)
+
+Stress: slight positive relationship
+
+Happiness: slight negative relationship
+
+Digital dependence: strong positive tendency
+
+Sleep hours: mild negative trend
+
+Social media minutes: positive, but weaker than expected
+
+Several correlations had significant p-values (p < 0.05), indicating non-random relationships.
+
+**📌 Summary Insight:**
+Heavier screen users tend to show higher stress, higher digital dependence, lower happiness, and slightly reduced sleep duration.
+
+🧾 Conclusion
+
+This project shows that:
+
+Income level does not significantly influence daily screen time, though the relationship is marginal
+
+Income level also does not significantly influence digital dependence, but a weak trend appears
+
+Screen time is more strongly related to psychological indicators than to socioeconomic status
+
+Heavy screen usage corresponds to higher stress, stronger digital dependence, and slightly lower happiness
+
+Overall, digital lifestyle patterns are influenced more by behavioral and emotional factors than by income alone.
+
+**🚀 Future Work**
+
+Potential extensions:
+
+Regression models to predict stress or digital dependence
+
+Weekday vs. weekend screen time comparison
+
+Interaction effects (such as income × age)
+
+Cluster analysis to find digital lifestyle segments
+
+🛠️ **Technologies Used**
+
+Python
+
+Pandas, NumPy
 
 Matplotlib & Seaborn
 
-SciPy (ANOVA, Tukey, Pearson correlation)
+SciPy (ANOVA + Pearson correlation)
 
 Google Colab
