@@ -1,116 +1,149 @@
-# 📱 Digital Lifestyle Analysis  
-### Investigating the Relationship Between Screen Time and Social Interaction Indicators
+Investigating the Relationship Between Screen Time and Income Level
+📌 **Overview**
 
-## 📌 Overview
-Digital devices have become a central part of everyday life, shaping how people communicate, socialize, and manage their routines. Although increased screen time offers convenience and online connectivity, its effects on real-world social interaction and emotional well-being are not fully understood.
+Digital technology shapes how individuals work, communicate, and spend leisure time. However, the relationship between socioeconomic status and digital behavior remains underexplored.
+This study investigates whether income level is associated with differences in daily screen time, offering insight into how socioeconomic factors influence digital habits and potential behavioral disparities.
 
-This project analyzes the relationship between **daily screen time** and **social-interaction–related indicators**, including social media usage, stress, happiness, and digital dependence. The goal is to determine whether heavier screen usage is linked to reduced well-being or behavioral changes.
+By comparing screen time across income groups and applying statistical tests, the project aims to provide a deeper understanding of how socioeconomic status contributes to modern digital lifestyles.
 
----
+🎯 **Objectives**
 
-## 🎯 Objectives
 This study aims to:
 
-- Examine the relationship between daily screen time and social interaction indicators.  
-- Investigate whether increased screen time is associated with reduced emotional well-being.  
-- Identify behavioral patterns related to digital habits.  
-- Analyze how lifestyle metrics (stress, anxiety, happiness, sleep) vary across different screen time levels.
+Analyze the relationship between income level and daily screen time.
 
----
+Determine whether individuals from different income brackets show significantly different digital habits.
 
-## 🧪 Hypotheses
+Explore whether related well-being indicators (stress, happiness, digital dependence) also vary with income.
 
-### **Null Hypothesis (H₀)**
-There is **no statistically significant correlation** between daily screen time and any of the social-interaction–related or emotional well-being indicators  
-(social media usage, stress, happiness, digital dependence).
+Provide a statistically grounded evaluation using ANOVA, post-hoc analysis, and correlation tests.
 
-### **Alternative Hypothesis (H₁)**
-There **is** a statistically significant correlation between daily screen time and at least one of these indicators.
+🧪 Hypotheses
+Null Hypothesis (H₀)
 
-Hypothesis testing was conducted using **Pearson correlation coefficients** and **p-values (α = 0.05)**.
+Income level has no statistically significant effect on daily screen time.
+(Mean screen time is the same across all income groups.)
 
----
+Alternative Hypothesis (H₁)
 
-## 📊 Dataset Description
-The project uses the **Digital Lifestyle Benchmark Dataset**, which includes:
+Income level has a statistically significant effect on daily screen time.
+(At least one income group differs from the others.)
 
-- Demographic data (age, gender, region, income level)  
-- Behavioral metrics (device hours per day, social media minutes, notifications, phone unlocks)  
-- Psychological indicators (stress, anxiety, depression, happiness, digital dependence)  
-- Lifestyle factors (sleep duration, physical activity)
+Additional Tests
 
-The dataset is publicly available and ideal for behavioral and digital well-being analysis.
+To strengthen the analysis, the following relationships were also tested:
 
----
+Screen time vs. stress, happiness, and digital dependence
 
-## 🔧 Data Preparation
+Income level vs. these psychological variables
 
-### **1. Data Cleaning**
-- Removed missing values from key variables  
-- Filtered unrealistic values (e.g., >18 hours of screen time)  
-- Ensured consistent data types for numerical fields  
+Using Pearson correlation, ANOVA, and t-tests
 
-### **2. Feature Selection**
-The core features used:
+All hypothesis tests were evaluated with a significance threshold of α = 0.05.
 
-- `device_hours_per_day`
-- `social_media_mins`
-- `stress_level`
-- `anxiety_score`
-- `depression_score`
-- `happiness_score`
-- `digital_dependence_score`
-- `sleep_hours`
+📊 **Dataset Description**
 
-### **3. Structuring**
-A cleaned dataframe (`df_clean`) was created for EDA and hypothesis testing.
+The project uses the Digital Lifestyle Benchmark Dataset, consisting of:
 
----
+Demographics: age, gender, region, income level
 
-## 🔍 Analytical Approach
+Digital Behavior: device hours per day, social media minutes, phone unlocks, notifications
 
-### **Exploratory Data Analysis (EDA)**
-- Distribution plots for all major variables  
-- Scatter plots comparing screen time with social media usage  
-- Correlation matrix and heatmap  
-- Screen-time-based group comparisons (0–2h, 2–4h, 4–6h, …, 10+h)
+Psychological Indicators: stress, anxiety, depression, happiness, digital dependence
 
-### **Statistical Testing**
-- Pearson correlation (r-values)  
-- p-values to determine statistical significance  
-- Hypothesis evaluation based on α = 0.05 threshold  
+Lifestyle Attributes: sleep hours, physical activity days, daily role
 
----
+The dataset is large and diverse enough to support socio-behavioral comparisons.
 
-## ⭐ Key Findings
+🔧 **Data Preparation**
+1. Data Cleaning
 
-- **Screen time and social media usage showed a positive correlation**, meaning heavier device users spend more time on social media.  
-- **Digital dependence increased sharply** among individuals with higher daily device usage.  
-- **Stress and anxiety levels showed mild positive correlations** with screen time.  
-- **Happiness scores decreased slightly** as screen time increased.  
-- Users in the **10+ hours/day** group displayed the highest levels of social media use, notifications, and digital dependence.  
-- Several relationships were statistically **significant (p < 0.05)**, providing evidence to **reject the null hypothesis**.
+Removed missing values for key variables
 
----
+Filtered unrealistic values (e.g., >18 hours/day screen time)
 
-## 🧾 Conclusion
-The analysis shows that daily screen time is meaningfully related to behavioral and emotional metrics. Higher screen time is associated with increased social media engagement, higher stress, and stronger digital dependence, alongside a slight reduction in happiness levels.
+Ensured categorical consistency for income groups
 
-These findings suggest that heavy digital consumption may influence both social interaction patterns and emotional well-being.
+2. Feature Selection
 
----
+Key variables used in this project:
 
-## 🚀 Future Work
-- Predictive modeling (e.g., regression) to forecast digital dependence  
-- Expanding analysis with additional behavioral variables  
-- Comparing weekday vs. weekend digital behavior  
-- Including offline social interaction metrics if available  
+device_hours_per_day
 
----
+income_level
 
-## 📌 Technologies Used
-- Python (Pandas, NumPy)  
-- Matplotlib  
-- SciPy (Pearson correlation)  
-- Google Colab  
+stress_level
 
+happiness_score
+
+digital_dependence_score
+
+social_media_mins
+
+sleep_hours
+
+3. Structuring
+
+Created a cleaned dataframe (df_clean) suitable for EDA and hypothesis testing.
+
+🔍 **Analytical Approach**
+Exploratory Data Analysis (EDA)
+
+Visual comparison of screen time across income groups
+
+Boxplots, bar charts, distribution plots
+
+Group statistics for each income category
+
+Correlation analysis with well-being indicators
+
+Statistical Testing
+
+One-way ANOVA to test differences in screen time among 4 income groups
+
+Post-hoc Tukey test to identify which groups differ significantly
+
+Independent t-tests for pairwise comparisons
+
+Pearson correlation to explore broader relationships
+
+⭐ **Key Findings**
+
+Income level is significantly associated with daily screen time (ANOVA p < 0.05), leading to a rejection of the null hypothesis.
+
+Lower-income individuals tended to exhibit higher average screen time, while higher-income individuals showed more balanced usage patterns.
+
+Digital dependence scores were higher among lower-income groups, suggesting potential attachment to devices or digital coping behaviors.
+
+Happiness and stress levels showed variation across income categories, with higher-income individuals reporting slightly higher happiness and lower stress.
+
+Social media minutes and notifications also differed across groups, reflecting distinct behavioral patterns linked to socioeconomic status.
+
+These results indicate that screen time is not solely a behavioral choice, but may be influenced by socioeconomic factors.
+
+🧾 **Conclusion**
+
+The analysis demonstrates a clear relationship between income level and digital behavior, particularly screen time.
+Lower-income groups tend to spend more time on devices and report higher digital dependence, while higher-income individuals show lower screen time and more balanced emotional indicators.
+
+This suggests that socioeconomic status contributes to different digital lifestyle patterns, potentially influencing well-being, productivity, and stress.
+
+🚀 **Future Work**
+
+Develop regression models to predict screen time from income and lifestyle factors
+
+Include region or occupation as moderating variables
+
+Expand the dataset with offline social interaction measures
+
+Explore behavioral segmentation using clustering techniques
+
+📌 **Technologies Used**
+
+Python (Pandas, NumPy)
+
+Matplotlib & Seaborn
+
+SciPy (ANOVA, Tukey, Pearson correlation)
+
+Google Colab
