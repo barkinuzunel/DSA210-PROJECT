@@ -203,17 +203,16 @@ Heavy screen usage corresponds to higher stress, stronger digital dependence, an
 
 Overall, digital lifestyle patterns are influenced more by behavioral and emotional factors than by income alone.
 
-**🚀 Future Work**
+## 🤖 Machine Learning: Predicting Income Level from Digital Behavior
 
-Potential extensions:
+As a machine learning component, I trained a Random Forest classifier to predict **income_level** using digital lifestyle and well-being features such as screen time, social media minutes, sleep hours, stress, happiness, digital dependence, notifications, phone unlocks, anxiety, and depression scores.
 
-Regression models to predict stress or digital dependence
+The model reached an **accuracy of about 31%** on the test set. This performance is only slightly above the majority-class baseline (always predicting the most frequent income group, ≈31%), which indicates that **income level is very hard to infer from digital behavior alone**.
 
-Weekday vs. weekend screen time comparison
+The **classification report** shows low precision, recall and F1-scores, especially for the *High* and *Upper-Mid* income groups, and the **confusion matrix** reveals that the model tends to predict mostly **Low** and **Lower-Mid** categories while frequently confusing higher income levels.
 
-Interaction effects (such as income × age)
+A **feature importance analysis** suggests that variables such as **sleep hours, social media minutes, notifications per day, phone unlocks, and device hours per day** are the most influential predictors for income level. However, their combined signal is still not strong enough to build an accurate classifier, reinforcing the idea that **socioeconomic status cannot be reliably predicted from digital usage patterns in this dataset**.
 
-Cluster analysis to find digital lifestyle segments
 
 🛠️ **Technologies Used**
 
@@ -224,5 +223,7 @@ Pandas, NumPy
 Matplotlib & Seaborn
 
 SciPy (ANOVA + Pearson correlation)
+
+Gemini
 
 Google Colab
